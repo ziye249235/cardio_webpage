@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/">Home</a> 
+        <a class="navbar-brand" href="sampledata">Sample data</a>
+        <a class="navbar-brand" href="info">Information</a>
+        <a class="navbar-brand" href="model">machine learning model</a>
+      </nav>  
+    <div class="jumbotron">
+        <h1 class="display-3">Sample Data</h1>
+        <p>The data below is a sample of our full dataset used in order to train our machine learning model. The full dataset contains more than 70,000 rows of patient data. </p>
+    </div>
+    <div>
+        Here is a brief explanation of each feature of our sample data: <br>
+        <li>Age: age in days</li>
+        <li>Gender: 1 for woman and 2 for man</li>
+        <li>Height: in centimeters</li>
+        <li>Weight: in kilograms</li>
+        <li>Ap_hi: systolic blood pressure</li>
+        <li>Ap_low: distolic blood pressure</li>
+        <li>Cholesterol: 1-normal, 2-above normal, 3-well above normal</li>
+        <li>Gluc: glucose level, 1-normal, 2-above normal, 3-well above normal</li>
+        <li>Smoke: whether the patient smokes, 0-no, 1-yes</li>
+        <li>Alco: whether the patient drinks alcohol, 0-no, 1-yes</li>
+        <li>Active: whether the patient regularly does physical activities, 0-no, 1-yes</li>
+        <li>Cardio: presence or absense of cardiovascular disease, 0-no, 1-yes, this is our target variable</li>
+        <li>age_to_years: age in years</li>
+        <li>age_group: patient's age by age bucket</li>
+    </div><br><br>
+{% for table in tables %}
+            {{ table|safe }}
+{% endfor %}
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
